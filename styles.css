@@ -89,7 +89,7 @@ body {
   font-size: clamp(0.9rem, 1.8vw, 1.4rem);
   color: rgba(250,243,230,0.5);
   letter-spacing: 0.08em;
-  margin-top: 2.5rem;
+  margin-top: 0.8rem;
   opacity: 0;
   transition: opacity 0.8s ease;
 }
