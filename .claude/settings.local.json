@@ -15,7 +15,11 @@
       "mcp__Claude_Preview__preview_start",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(/opt/homebrew/bin/gh repo:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(/opt/homebrew/bin/gh api:*)"
     ]
   }
 }

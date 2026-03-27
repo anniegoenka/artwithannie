@@ -974,3 +974,325 @@ footer {
   .slide-content-bottom { padding-bottom: 5rem; }
   .carousel-slide::before { inset: 0.8rem; }
 }
+
+/* ═══════════════════════════════════════
+   HAMBURGER & MOBILE NAV
+═══════════════════════════════════════ */
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 201;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--cream);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav.scrolled .nav-hamburger span { background: var(--dark); }
+
+.nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: var(--crimson-dark);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.mobile-nav.open { opacity: 1; visibility: visible; }
+
+.mobile-nav-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: rgba(250,243,230,0.5);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.mobile-nav-close:hover { color: var(--cream); }
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.mobile-nav-links a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 300;
+  color: rgba(250,243,230,0.7);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: color 0.3s ease;
+}
+.mobile-nav-links a:hover { color: var(--cream); }
+
+@media (max-width: 768px) {
+  .nav-hamburger { display: flex; }
+  .nav-links { display: none !important; }
+}
+
+/* ═══════════════════════════════════════
+   BACK TO TOP
+═══════════════════════════════════════ */
+
+.back-to-top {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  width: 42px;
+  height: 42px;
+  background: var(--crimson);
+  border: 1px solid rgba(250,243,230,0.15);
+  color: var(--cream);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease, background 0.3s ease;
+  pointer-events: none;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+.back-to-top:hover { background: var(--crimson-dark); }
+
+/* ═══════════════════════════════════════
+   AG WATERMARK (fixed, ultra-faint)
+═══════════════════════════════════════ */
+
+.ag-watermark {
+  position: fixed;
+  bottom: -2rem;
+  left: -1rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 18rem;
+  color: var(--crimson);
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
+  transition: opacity 0.5s ease;
+  user-select: none;
+}
+
+/* ═══════════════════════════════════════
+   PAGE TRANSITION OVERLAY
+═══════════════════════════════════════ */
+
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--crimson-dark);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+
+/* ═══════════════════════════════════════
+   FADE-IN ON SCROLL
+═══════════════════════════════════════ */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children */
+.fade-in-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in-stagger.visible > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0s; }
+.fade-in-stagger.visible > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.1s; }
+.fade-in-stagger.visible > *:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.2s; }
+.fade-in-stagger.visible > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.3s; }
+
+/* ═══════════════════════════════════════
+   GRAIN TEXTURE (crimson sections)
+═══════════════════════════════════════ */
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════
+   PORTFOLIO CARD — enhanced hover
+═══════════════════════════════════════ */
+
+/* Corner accent lines that draw in on hover */
+.portfolio-card .card-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 3;
+  transition: all 0.4s ease;
+}
+.portfolio-card .card-corner::before,
+.portfolio-card .card-corner::after {
+  content: '';
+  position: absolute;
+  background: rgba(250,243,230,0.4);
+  transition: all 0.4s ease;
+}
+.card-corner.tl { top: 1.2rem; left: 1.2rem; }
+.card-corner.tr { top: 1.2rem; right: 1.2rem; }
+.card-corner.bl { bottom: 1.2rem; left: 1.2rem; }
+.card-corner.br { bottom: 1.2rem; right: 1.2rem; }
+
+.card-corner.tl::before, .card-corner.tr::before { top: 0; height: 1px; width: 0; }
+.card-corner.bl::before, .card-corner.br::before { bottom: 0; height: 1px; width: 0; }
+.card-corner.tl::after, .card-corner.bl::after { left: 0; width: 1px; height: 0; }
+.card-corner.tr::after, .card-corner.br::after { right: 0; width: 1px; height: 0; }
+
+.card-corner.tl::before { left: 0; }
+.card-corner.tr::before { right: 0; }
+
+.portfolio-card:hover .card-corner::before { width: 20px; }
+.portfolio-card:hover .card-corner::after { height: 20px; }
+
+/* ═══════════════════════════════════════
+   LIGHTBOX
+═══════════════════════════════════════ */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 10, 18, 0.95);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.lightbox.open { opacity: 1; visibility: visible; }
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  background: none;
+  border: none;
+  color: rgba(250,243,230,0.5);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.lightbox-close:hover { color: var(--cream); }
+
+/* ═══════════════════════════════════════
+   FULLSCREEN BUTTON (Canva)
+═══════════════════════════════════════ */
+
+.embed-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.fullscreen-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  background: none;
+  border: 1px solid rgba(139,26,47,0.25);
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.fullscreen-btn:hover {
+  background: var(--crimson);
+  color: var(--cream);
+  border-color: var(--crimson);
+}
+
+/* ═══════════════════════════════════════
+   FOOTER SOCIAL ICONS
+═══════════════════════════════════════ */
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(250,243,230,0.15);
+  color: rgba(250,243,230,0.4);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.footer-social a:hover {
+  border-color: rgba(250,243,230,0.4);
+  color: var(--cream);
+}
+.footer-social svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
