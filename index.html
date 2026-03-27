@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annie Goenka</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       SPLASH
+  ════════════════════════════════════ -->
+  <div id="splash">
+    <div class="splash-inner">
+      <div class="initials-wrap">
+        <span class="splash-initial" id="initial-a">A</span>
+        <span class="splash-initial" id="initial-g">G</span>
+        <div class="splash-name">Annie Goenka</div>
+      </div>
+      <p class="splash-tagline">Art, Fashion &amp; the Stories In Between</p>
+    </div>
+    <div class="splash-scroll">
+      <span>scroll</span>
+      <div class="splash-scroll-line"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════ -->
+  <nav>
+    <div class="nav-logo"><a href="index.html">AG</a></div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="#portfolios">Portfolios</a>
+      <a href="editorial.html">Editorial</a>
+      <a href="marketing.html">Marketing</a>
+      <a href="about.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════
+       CAROUSEL
+  ════════════════════════════════════ -->
+  <section class="carousel" id="carousel">
+
+    <!-- Slide 1: Home -->
+    <div class="carousel-slide active" data-href="">
+      <div class="slide-bg slide-home"></div>
+      <div class="slide-content slide-content-center">
+        <p class="slide-eyebrow">Welcome to the world of</p>
+        <h1 class="slide-name">Annie<br><em>Goenka</em></h1>
+        <p class="slide-tagline">Art, Fashion &amp; the Stories In Between</p>
+        <a href="#portfolios" class="slide-cta slide-cta-light">Explore Work</a>
+      </div>
+    </div>
+
+    <!-- Slide 2: Fashion -->
+    <div class="carousel-slide" data-href="fashion.html">
+      <div class="slide-bg slide-fashion"></div>
+      <div class="slide-content slide-content-bottom">
+        <p class="slide-label">Portfolio — 01</p>
+        <h2 class="slide-title">Fashion</h2>
+        <p class="slide-desc">Collections, styling &amp; visual storytelling</p>
+        <a href="fashion.html" class="slide-cta slide-cta-light">View Portfolio →</a>
+      </div>
+    </div>
+
+    <!-- Slide 3: Art -->
+    <div class="carousel-slide" data-href="art.html">
+      <div class="slide-bg slide-art"></div>
+      <div class="slide-content slide-content-bottom slide-content-dark">
+        <p class="slide-label">Portfolio — 02</p>
+        <h2 class="slide-title slide-title-dark">Art</h2>
+        <p class="slide-desc slide-desc-dark">Visual art &amp; creative projects</p>
+        <a href="art.html" class="slide-cta slide-cta-dark">View Portfolio →</a>
+      </div>
+    </div>
+
+    <!-- Slide 4: Editorial -->
+    <div class="carousel-slide" data-href="editorial.html">
+      <div class="slide-bg slide-editorial"></div>
+      <div class="slide-content slide-content-bottom">
+        <p class="slide-label">Portfolio — 03</p>
+        <h2 class="slide-title">Editorial</h2>
+        <p class="slide-desc">Written work &amp; publications</p>
+        <a href="editorial.html" class="slide-cta slide-cta-light">View Portfolio →</a>
+      </div>
+    </div>
+
+    <!-- Slide 5: Marketing -->
+    <div class="carousel-slide" data-href="marketing.html">
+      <div class="slide-bg slide-marketing"></div>
+      <div class="slide-content slide-content-bottom">
+        <p class="slide-label">Portfolio — 04</p>
+        <h2 class="slide-title">Marketing</h2>
+        <p class="slide-desc">Campaigns, analysis &amp; strategy</p>
+        <a href="marketing.html" class="slide-cta slide-cta-light">View Portfolio →</a>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-arrow carousel-prev" aria-label="Previous">&#8592;</button>
+    <button class="carousel-arrow carousel-next" aria-label="Next">&#8594;</button>
+
+    <!-- Dots -->
+    <div class="carousel-dots">
+      <button class="carousel-dot active" data-index="0"></button>
+      <button class="carousel-dot" data-index="1"></button>
+      <button class="carousel-dot" data-index="2"></button>
+      <button class="carousel-dot" data-index="3"></button>
+      <button class="carousel-dot" data-index="4"></button>
+    </div>
+
+    <!-- Counter -->
+    <div class="carousel-counter">
+      <span id="carousel-current">01</span>
+      <span class="carousel-counter-sep"></span>
+      <span class="carousel-counter-total">05</span>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="carousel-progress"><div class="carousel-progress-bar" id="carousel-progress-bar"></div></div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════
+       MARQUEE
+  ════════════════════════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <span>Fashion</span><span class="dot">✦</span>
+      <span>Art</span><span class="dot">✦</span>
+      <span>Editorial</span><span class="dot">✦</span>
+      <span>Marketing</span><span class="dot">✦</span>
+      <span>Creative Direction</span><span class="dot">✦</span>
+      <span>Annie Goenka</span><span class="dot">✦</span>
+      <span>Fashion</span><span class="dot">✦</span>
+      <span>Art</span><span class="dot">✦</span>
+      <span>Editorial</span><span class="dot">✦</span>
+      <span>Marketing</span><span class="dot">✦</span>
+      <span>Creative Direction</span><span class="dot">✦</span>
+      <span>Annie Goenka</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       PORTFOLIOS GRID
+  ════════════════════════════════════ -->
+  <section id="portfolios" class="portfolios-section">
+    <p class="section-label">The Collection</p>
+    <h2 class="section-title">Explore <em>All Work</em></h2>
+    <div class="section-rule"></div>
+
+    <div class="portfolio-grid">
+
+      <a href="fashion.html" class="portfolio-card" data-number="01">
+        <div class="portfolio-card-bg">F</div>
+        <div class="portfolio-card-content">
+          <span>Portfolio</span>
+          <h3>Fashion</h3>
+          <p>Collections &amp; styling</p>
+        </div>
+      </a>
+
+      <a href="art.html" class="portfolio-card" data-number="02">
+        <div class="portfolio-card-bg">A</div>
+        <div class="portfolio-card-content">
+          <span>Portfolio</span>
+          <h3>Art</h3>
+          <p>Visual &amp; creative work</p>
+        </div>
+      </a>
+
+      <a href="editorial.html" class="portfolio-card" data-number="03">
+        <div class="portfolio-card-bg">E</div>
+        <div class="portfolio-card-content">
+          <span>Portfolio</span>
+          <h3>Editorial</h3>
+          <p>Written work &amp; publications</p>
+        </div>
+      </a>
+
+      <a href="marketing.html" class="portfolio-card" data-number="04">
+        <div class="portfolio-card-bg">M</div>
+        <div class="portfolio-card-content">
+          <span>Portfolio</span>
+          <h3>Marketing</h3>
+          <p>Campaigns &amp; analysis</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ════════════════════════════════════ -->
+  <footer>
+    <div class="footer-logo">AG</div>
+    <div class="footer-center">
+      <p>&copy; 2025 Annie Goenka &mdash; All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="about.html#contact">Contact</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
