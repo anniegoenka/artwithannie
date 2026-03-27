@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --crimson: #8B1A2F;
-  --crimson-dark: #5C0F1E;
-  --crimson-deeper: #3A0812;
+  --crimson: #6B0E22;
+  --crimson-dark: #4A0917;
+  --crimson-deeper: #2E050E;
   --cream: #FAF3E6;
   --cream-dark: #EDE0CC;
   --dark: #1C0A12;
@@ -215,11 +215,11 @@ nav:not(.scrolled) .nav-links a:hover { color: var(--cream); }
 }
 
 .slide-home {
-  background: linear-gradient(160deg, var(--crimson-deeper) 0%, var(--crimson-dark) 50%, #4A0C1A 100%);
+  background: linear-gradient(160deg, var(--crimson-deeper) 0%, var(--crimson-dark) 50%, #380A14 100%);
 }
 
 .slide-fashion {
-  background: linear-gradient(145deg, #7A1030 0%, var(--crimson) 40%, #A02040 100%);
+  background: linear-gradient(145deg, #55091C 0%, var(--crimson) 40%, #7A1028 100%);
 }
 
 .slide-art {
