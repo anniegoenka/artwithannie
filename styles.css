@@ -291,6 +291,9 @@ nav:not(.scrolled) .nav-dropdown-toggle:hover { color: var(--cream); }
   color: #efecde;
 }
 .nav-dropdown-menu a::after { display: none; }
+/* Override cream-on-dark-nav rule — dropdown is always cream bg with dark text */
+nav:not(.scrolled) .nav-dropdown-menu a { color: #601616; }
+nav:not(.scrolled) .nav-dropdown-menu a:hover { color: #efecde; }
 
 /* ═══════════════════════════════════════
    CAROUSEL
