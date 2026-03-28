@@ -30,21 +30,21 @@ window.addEventListener('DOMContentLoaded', () => {
   const splash = document.getElementById('splash');
   if (!splash) return;
 
-  const initialsWrap = document.querySelector('.initials-wrap');
-  const initialA = document.getElementById('initial-a');
-  const initialG = document.getElementById('initial-g');
+  const splashLogo = document.getElementById('splash-logo');
   const splashName = document.querySelector('.splash-name');
   const splashScroll = document.querySelector('.splash-scroll');
 
+  // Fade logo in
   setTimeout(() => {
-    if (initialA) initialA.style.opacity = '1';
-    if (initialG) initialG.style.opacity = '1';
+    if (splashLogo) splashLogo.classList.add('visible');
   }, 400);
 
+  // Logo fades out
   setTimeout(() => {
-    if (initialsWrap) initialsWrap.classList.add('animate');
+    if (splashLogo) splashLogo.classList.add('animate');
   }, 1600);
 
+  // Name reveals
   setTimeout(() => {
     if (splashName) splashName.classList.add('visible');
   }, 2200);
