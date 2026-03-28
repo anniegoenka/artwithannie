@@ -824,9 +824,14 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  align-items: start;
 }
 .editorial-embed-item {
   width: 100%;
+}
+/* Portrait aspect ratio for editorial documents */
+.editorial-embed-item .embed-wrapper {
+  padding-top: 141%;
 }
 @media (max-width: 768px) {
   .editorial-embed-pair {
