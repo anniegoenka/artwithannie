@@ -46,24 +46,40 @@ body {
   text-align: center;
 }
 
-/* Logo image — your actual AG monogram */
-.splash-logo {
-  width: clamp(18rem, 42vw, 52rem);
-  height: auto;
+/* Logo wrap — grid so halves + name all stack in the same cell */
+.splash-logo-wrap {
+  display: grid;
+  place-items: center;
+  width: clamp(18rem, 44vw, 54rem);
   opacity: 0;
-  transition: opacity 0.8s ease, transform 1s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: opacity 0.8s ease;
 }
-.splash-logo.visible { opacity: 1; }
-.splash-logo.animate { opacity: 0; transform: scale(0.92); }
+.splash-logo-wrap.visible { opacity: 1; }
+
+.splash-logo-half {
+  grid-area: 1 / 1;
+  width: 100%;
+  transition: transform 1s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.6s ease;
+}
+.splash-logo-half img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* A = left 53%, G = right 47% of the SVG */
+#splash-logo-left  { clip-path: inset(0 47% 0 0); }
+#splash-logo-right { clip-path: inset(0 0 0 53%); }
+
+/* Split animation — A flies left, G flies right */
+.splash-logo-wrap.animate #splash-logo-left  { transform: translateX(-60vw); opacity: 0; }
+.splash-logo-wrap.animate #splash-logo-right { transform: translateX(60vw);  opacity: 0; }
 
 .splash-name {
+  grid-area: 1 / 1;
   font-family: 'Bodoni Moda', serif;
   color: #EDE8D5;
   text-transform: uppercase;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   white-space: nowrap;
   opacity: 0;
   display: flex;

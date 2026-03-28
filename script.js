@@ -30,18 +30,18 @@ window.addEventListener('DOMContentLoaded', () => {
   const splash = document.getElementById('splash');
   if (!splash) return;
 
-  const splashLogo = document.getElementById('splash-logo');
+  const splashLogoWrap = document.getElementById('splash-logo-wrap');
   const splashName = document.querySelector('.splash-name');
   const splashScroll = document.querySelector('.splash-scroll');
 
-  // Fade logo in
+  // Logo fades in
   setTimeout(() => {
-    if (splashLogo) splashLogo.classList.add('visible');
+    if (splashLogoWrap) splashLogoWrap.classList.add('visible');
   }, 400);
 
-  // Logo fades out
+  // A slides left, G slides right
   setTimeout(() => {
-    if (splashLogo) splashLogo.classList.add('animate');
+    if (splashLogoWrap) splashLogoWrap.classList.add('animate');
   }, 1600);
 
   // Name reveals
