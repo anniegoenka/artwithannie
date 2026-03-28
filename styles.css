@@ -81,16 +81,31 @@ body {
   grid-area: 1 / 1;
   opacity: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  line-height: 0.88;
   transition: opacity 0.8s ease;
 }
 .splash-name.visible { opacity: 1; }
 
-.splash-name-img {
-  width: clamp(20rem, 50vw, 62rem);
-  height: auto;
-  display: block;
+.splash-name-line1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 6rem);
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  padding-right: 0.5em;
+  color: #efecde;
+  text-transform: uppercase;
+}
+.splash-name-line2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 7vw, 8.5rem);
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  padding-right: 0.4em;
+  color: #efecde;
+  text-transform: uppercase;
 }
 
 .splash-tagline {
@@ -156,7 +171,7 @@ nav {
 nav.scrolled {
   background: rgba(239,236,222,0.97);
   padding: 1.2rem 3.5rem;
-  box-shadow: 0 1px 0 rgba(96,22,22,0.08);
+  box-shadow: 0 1px 0 #601616;
 }
 
 .nav-logo {
@@ -166,11 +181,13 @@ nav.scrolled {
 .nav-logo-img {
   height: 2.8rem;
   width: auto;
-  filter: brightness(0) saturate(100%) invert(10%) sepia(60%) saturate(800%) hue-rotate(320deg) brightness(60%);
+  /* On scrolled (cream) nav: make logo dark red */
+  filter: brightness(0) sepia(1) saturate(4) hue-rotate(310deg) brightness(0.45);
   transition: opacity 0.2s ease;
 }
 nav:not(.scrolled) .nav-logo-img {
-  filter: brightness(0) invert(1);
+  /* On dark red nav: make logo cream */
+  filter: brightness(0) invert(1) sepia(0.1);
 }
 .nav-logo-img:hover { opacity: 0.75; }
 
@@ -264,7 +281,7 @@ nav:not(.scrolled) .nav-links a:hover { color: var(--cream); }
 
 /* Art slide (cream bg) gets a crimson frame */
 .carousel-slide:nth-child(3)::before {
-  border-color: rgba(96,22,22,0.1);
+  border-color: #842020;
 }
 
 /* ── Slide content ── */
@@ -348,10 +365,10 @@ nav:not(.scrolled) .nav-links a:hover { color: var(--cream); }
   margin-bottom: 2.5rem;
   max-width: 380px;
 }
-.slide-desc-dark { color: rgba(96,22,22,0.45); }
+.slide-desc-dark { color: #601616; }
 
 /* ── Dark-text variant for light bg slides ── */
-.slide-content-dark .slide-label { color: rgba(96,22,22,0.35); }
+.slide-content-dark .slide-label { color: #601616; }
 
 /* ── CTAs ── */
 
@@ -381,7 +398,7 @@ nav:not(.scrolled) .nav-links a:hover { color: var(--cream); }
 
 .slide-cta-dark {
   color: var(--crimson);
-  border: 1px solid rgba(96,22,22,0.3);
+  border: 1px solid rgba(96,22,22,0.5);
 }
 .slide-cta-dark:hover {
   background: var(--crimson);
@@ -727,7 +744,7 @@ footer {
   width: 100%;
   padding-top: 56.25%;
   background: var(--cream-dark);
-  border: 1px solid rgba(96,22,22,0.08);
+  border: 1px solid #601616;
 }
 .embed-wrapper iframe {
   position: absolute;
@@ -740,7 +757,7 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.6rem;
   letter-spacing: 0.08em;
-  color: rgba(96,22,22,0.35);
+  color: #601616;
   margin-top: 0.75rem;
 }
 
@@ -815,9 +832,9 @@ footer {
   grid-template-columns: 100px 1fr;
   gap: 2rem;
   padding: 2rem 0;
-  border-bottom: 1px solid rgba(96,22,22,0.1);
+  border-bottom: 1px solid #842020;
 }
-.edu-item:first-child { border-top: 1px solid rgba(96,22,22,0.1); }
+.edu-item:first-child { border-top: 1px solid #842020; }
 .edu-year {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.6rem;
@@ -842,7 +859,7 @@ footer {
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.65rem;
-  color: rgba(96,22,22,0.4);
+  color: #601616;
   margin-top: 0.4rem;
   letter-spacing: 0.04em;
 }
@@ -944,7 +961,7 @@ footer {
 .placeholder-section .big-script {
   font-family: 'Great Vibes', cursive;
   font-size: clamp(3rem, 8vw, 8rem);
-  color: rgba(96,22,22,0.07);
+  color: #601616;
   line-height: 1;
   margin-bottom: 1.5rem;
 }
@@ -952,7 +969,7 @@ footer {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.15rem;
-  color: rgba(96,22,22,0.35);
+  color: #601616;
 }
 
 /* ═══════════════════════════════════════
@@ -1271,7 +1288,7 @@ nav.scrolled .nav-hamburger span { background: var(--dark); }
   text-transform: uppercase;
   color: var(--crimson);
   background: none;
-  border: 1px solid rgba(96,22,22,0.25);
+  border: 1px solid rgba(96,22,22,0.5);
   padding: 0.6rem 1.2rem;
   cursor: pointer;
   text-decoration: none;
