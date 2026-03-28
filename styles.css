@@ -832,6 +832,7 @@ footer {
 /* Portrait aspect ratio for editorial documents */
 .editorial-embed-item .embed-wrapper {
   padding-top: 141%;
+  border: 1.5px solid #601616;
 }
 @media (max-width: 768px) {
   .editorial-embed-pair {
