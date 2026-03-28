@@ -34,7 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const initialA = document.getElementById('initial-a');
   const initialG = document.getElementById('initial-g');
   const splashName = document.querySelector('.splash-name');
-  const splashTagline = document.querySelector('.splash-tagline');
   const splashScroll = document.querySelector('.splash-scroll');
 
   setTimeout(() => {
@@ -49,10 +48,6 @@ window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     if (splashName) splashName.classList.add('visible');
   }, 2200);
-
-  setTimeout(() => {
-    if (splashTagline) splashTagline.classList.add('visible');
-  }, 2700);
 
   setTimeout(() => {
     if (splashScroll) splashScroll.classList.add('visible');
