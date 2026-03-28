@@ -493,37 +493,6 @@ nav:not(.scrolled) .nav-links a:hover { color: var(--cream); }
   transition: width linear;
 }
 
-/* ═══════════════════════════════════════
-   MARQUEE
-═══════════════════════════════════════ */
-
-.marquee-strip {
-  background: var(--crimson);
-  padding: 0.85rem 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.marquee-inner {
-  display: inline-flex;
-  animation: marquee 25s linear infinite;
-}
-.marquee-inner span {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 0.95rem;
-  color: rgba(239,236,222,0.7);
-  padding: 0 1.5rem;
-}
-.marquee-inner .dot {
-  color: rgba(239,236,222,0.25);
-  font-style: normal;
-  font-size: 0.6rem;
-}
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
 
 /* ═══════════════════════════════════════
    SECTION PRIMITIVES
