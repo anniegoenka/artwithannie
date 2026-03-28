@@ -28,7 +28,7 @@ body {
 #splash {
   position: fixed;
   inset: 0;
-  background: #601616;
+  background-color: #601616 !important;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -43,14 +43,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  width: 100%;
 }
 
 /* Logo wrap — grid so halves + name all stack in the same cell */
 .splash-logo-wrap {
   display: grid;
   place-items: center;
-  width: clamp(18rem, 44vw, 54rem);
+  width: clamp(22rem, 52vw, 64rem);
   opacity: 0;
   transition: opacity 0.8s ease;
 }
@@ -67,13 +69,13 @@ body {
   display: block;
 }
 
-/* A = left 53%, G = right 47% of the SVG */
-#splash-logo-left  { clip-path: inset(0 47% 0 0); }
-#splash-logo-right { clip-path: inset(0 0 0 53%); }
+/* Split at 64% — A on left, G on right */
+#splash-logo-left  { clip-path: inset(0 36% 0 0); }
+#splash-logo-right { clip-path: inset(0 0 0 64%); }
 
 /* Split animation — A flies left, G flies right */
-.splash-logo-wrap.animate #splash-logo-left  { transform: translateX(-60vw); opacity: 0; }
-.splash-logo-wrap.animate #splash-logo-right { transform: translateX(60vw);  opacity: 0; }
+.splash-logo-wrap.animate #splash-logo-left  { transform: translateX(-65vw); opacity: 0; }
+.splash-logo-wrap.animate #splash-logo-right { transform: translateX(65vw);  opacity: 0; }
 
 .splash-name {
   grid-area: 1 / 1;
@@ -94,7 +96,7 @@ body {
   font-size: clamp(2.2rem, 5.5vw, 6.5rem);
   font-weight: 400;
   letter-spacing: 0.35em;
-  padding-right: 0.35em; /* offset for letter-spacing on last char */
+  padding-right: 0.35em;
 }
 .splash-name-line2 {
   font-size: clamp(3rem, 7.5vw, 9rem);
