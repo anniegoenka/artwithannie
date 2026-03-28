@@ -34,6 +34,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const splashName = document.querySelector('.splash-name');
   const splashScroll = document.querySelector('.splash-scroll');
 
+  document.body.style.overflow = 'hidden';
+
   // Logo fades in
   setTimeout(() => {
     if (splashLogoWrap) splashLogoWrap.classList.add('visible');
@@ -49,28 +51,13 @@ window.addEventListener('DOMContentLoaded', () => {
     if (splashName) splashName.classList.add('visible');
   }, 2200);
 
+  // Fade out splash and redirect to About Me
   setTimeout(() => {
-    if (splashScroll) splashScroll.classList.add('visible');
-  }, 3200);
-
-  const dismissSplash = () => {
-    splash.classList.add('hidden');
-    document.body.style.overflow = '';
-    window.removeEventListener('scroll', dismissSplash);
-    window.removeEventListener('wheel', dismissSplash);
-    window.removeEventListener('touchmove', dismissSplash);
-  };
-
-  document.body.style.overflow = 'hidden';
-
-  setTimeout(() => {
-    window.addEventListener('scroll', dismissSplash);
-    window.addEventListener('wheel', dismissSplash);
-    window.addEventListener('touchmove', dismissSplash);
-    if (splashScroll) splashScroll.addEventListener('click', dismissSplash);
-  }, 3200);
-
-  setTimeout(dismissSplash, 7000);
+    splash.style.opacity = '0';
+    setTimeout(() => {
+      window.location.href = 'about.html';
+    }, 900);
+  }, 3800);
 });
 
 // ─────────────────────────────────────────
