@@ -171,12 +171,19 @@ nav.scrolled {
 }
 
 .nav-logo {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
   line-height: 1;
 }
-.nav-logo a { color: var(--crimson); text-decoration: none; }
-nav:not(.scrolled) .nav-logo a { color: var(--cream); }
+.nav-logo a { text-decoration: none; display: flex; align-items: center; }
+.nav-logo-img {
+  height: 2.8rem;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(10%) sepia(60%) saturate(800%) hue-rotate(320deg) brightness(60%);
+  transition: opacity 0.2s ease;
+}
+nav:not(.scrolled) .nav-logo-img {
+  filter: brightness(0) invert(1);
+}
+.nav-logo-img:hover { opacity: 0.75; }
 
 .nav-links { display: flex; gap: 2.5rem; align-items: center; }
 .nav-links a {
@@ -654,10 +661,13 @@ footer {
   gap: 2rem;
 }
 .footer-logo {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  color: var(--cream);
   line-height: 1;
+}
+.footer-logo-img {
+  height: 5rem;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
 .footer-center { text-align: center; }
 .footer-center p {
