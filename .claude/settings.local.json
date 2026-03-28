@@ -19,7 +19,15 @@
       "Bash(/opt/homebrew/bin/gh repo:*)",
       "Bash(git remote:*)",
       "Bash(git push:*)",
-      "Bash(/opt/homebrew/bin/gh api:*)"
+      "Bash(/opt/homebrew/bin/gh api:*)",
+      "Bash(gh run:*)",
+      "Bash(/opt/homebrew/bin/gh run:*)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(sed -i '' 's|<div class=\"\"nav-logo\"\"><a href=\"\"index.html\"\">AG</a></div>|<div class=\"\"nav-logo\"\"><a href=\"\"index.html\"\"><img src=\"\"logo-ag.png.svg\"\" alt=\"\"AG\"\" class=\"\"nav-logo-img\"\" /></a></div>|g' \"$f\")",
+      "Bash(sed -i '' 's|<div class=\"\"footer-logo\"\">AG</div>|<div class=\"\"footer-logo\"\"><img src=\"\"logo-ag.png.svg\"\" alt=\"\"AG\"\" class=\"\"footer-logo-img\"\" /></div>|g' \"$f\")",
+      "Bash(done)",
+      "Bash(grep -n '#[0-9a-fA-F]\\\\{3,6\\\\}' /Users/anaavigoenka/ArtWithAnnie/styles.css)"
     ]
   }
 }
