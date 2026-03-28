@@ -220,6 +220,79 @@ nav:not(.scrolled) .nav-links a:hover { color: var(--cream); }
 .nav-links a:hover { color: var(--crimson); }
 
 /* ═══════════════════════════════════════
+   NAV DROPDOWN
+═══════════════════════════════════════ */
+
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-toggle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--dark);
+  position: relative;
+  transition: color 0.3s ease;
+}
+nav:not(.scrolled) .nav-dropdown-toggle { color: rgba(239,236,222,0.8); }
+nav:not(.scrolled) .nav-dropdown-toggle:hover { color: var(--cream); }
+.nav-dropdown-toggle:hover { color: var(--crimson); }
+.nav-dropdown-toggle::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-dropdown:hover .nav-dropdown-toggle::after { width: 100%; }
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #efecde;
+  border-top: 2px solid #601616;
+  min-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  z-index: 200;
+}
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown-menu a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #601616;
+  text-decoration: none;
+  padding: 0.85rem 1.2rem;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:hover {
+  background: #601616;
+  color: #efecde;
+}
+.nav-dropdown-menu a::after { display: none; }
+
+/* ═══════════════════════════════════════
    CAROUSEL
 ═══════════════════════════════════════ */
 
