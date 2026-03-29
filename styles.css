@@ -795,7 +795,11 @@ footer {
   border: 1px solid rgba(239,236,222,0.08);
   pointer-events: none;
 }
-.page-header .section-label { color: rgba(239,236,222,0.4); }
+.page-header .section-label {
+  color: rgba(239,236,222,0.4);
+  font-size: 0.45rem;
+  letter-spacing: 0.22em;
+}
 .page-header .section-title { color: var(--cream); }
 .page-header .section-title em { color: rgba(239,236,222,0.6); }
 .page-header .section-rule { background: rgba(239,236,222,0.2); }
