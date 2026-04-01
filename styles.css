@@ -931,6 +931,10 @@ footer {
 .about-fullwidth {
   background: var(--cream);
   padding: 5rem 3.5rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
 }
 
 /* Photo grid — kept for when a photo is added back
@@ -946,6 +950,19 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.about-collage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-collage-img {
+  width: 380px;
+  height: auto;
+  display: block;
 }
 
 .about-name-img {
@@ -1152,7 +1169,8 @@ footer {
 
   .page-header { padding: 9rem 2rem 4rem; }
   .page-header::before { inset: 1.2rem; }
-  .about-fullwidth { padding: 3.5rem 2rem; }
+  .about-fullwidth { padding: 3.5rem 2rem; grid-template-columns: 1fr; }
+  .about-collage { display: none; }
 }
 
 @media (max-width: 600px) {
