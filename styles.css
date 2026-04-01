@@ -817,7 +817,7 @@ footer {
    EMBED
 ═══════════════════════════════════════ */
 
-.embed-section { padding: 2rem 3.5rem; background: var(--cream); }
+.embed-section { padding: 0.6rem 3.5rem; background: var(--cream); }
 .embed-section .embed-wrapper {
   width: 85%;
   margin: 0 auto;
