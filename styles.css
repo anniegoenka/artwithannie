@@ -608,7 +608,7 @@ nav:not(.scrolled) .nav-dropdown-menu a:hover { color: #efecde; }
 
 .section-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--crimson);
@@ -796,8 +796,8 @@ footer {
   pointer-events: none;
 }
 .page-header .section-label {
-  color: rgba(239,236,222,0.6);
-  font-size: 0.65rem;
+  color: rgba(239,236,222,0.85);
+  font-size: 0.85rem;
   letter-spacing: 0.22em;
 }
 .page-header .section-title { color: var(--cream); }
