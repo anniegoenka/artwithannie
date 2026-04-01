@@ -608,7 +608,7 @@ nav:not(.scrolled) .nav-dropdown-menu a:hover { color: #efecde; }
 
 .section-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--crimson);
@@ -783,7 +783,7 @@ footer {
 ═══════════════════════════════════════ */
 
 .page-header {
-  padding: 10rem 3.5rem 5rem;
+  padding: 6rem 3.5rem 3rem;
   background: var(--crimson);
   position: relative;
   overflow: hidden;
@@ -796,8 +796,8 @@ footer {
   pointer-events: none;
 }
 .page-header .section-label {
-  color: rgba(239,236,222,0.4);
-  font-size: 0.45rem;
+  color: rgba(239,236,222,0.6);
+  font-size: 0.65rem;
   letter-spacing: 0.22em;
 }
 .page-header .section-title { color: var(--cream); }
@@ -930,7 +930,7 @@ footer {
 
 .about-fullwidth {
   background: var(--cream);
-  padding: 5rem 3.5rem;
+  padding: 5rem 3.5rem 2.5rem;
 }
 
 /* Photo grid — kept for when a photo is added back
