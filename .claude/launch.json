@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8080"],
       "port": 8080
+    },
+    {
+      "name": "think-out-the-block",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "9876", "--directory", "/Users/anaavigoenka/ThinkOutTheBlock"],
+      "port": 9876
     }
   ]
 }

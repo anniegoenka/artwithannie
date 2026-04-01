@@ -27,7 +27,31 @@
       "Bash(sed -i '' 's|<div class=\"\"nav-logo\"\"><a href=\"\"index.html\"\">AG</a></div>|<div class=\"\"nav-logo\"\"><a href=\"\"index.html\"\"><img src=\"\"logo-ag.png.svg\"\" alt=\"\"AG\"\" class=\"\"nav-logo-img\"\" /></a></div>|g' \"$f\")",
       "Bash(sed -i '' 's|<div class=\"\"footer-logo\"\">AG</div>|<div class=\"\"footer-logo\"\"><img src=\"\"logo-ag.png.svg\"\" alt=\"\"AG\"\" class=\"\"footer-logo-img\"\" /></div>|g' \"$f\")",
       "Bash(done)",
-      "Bash(grep -n '#[0-9a-fA-F]\\\\{3,6\\\\}' /Users/anaavigoenka/ArtWithAnnie/styles.css)"
+      "Bash(grep -n '#[0-9a-fA-F]\\\\{3,6\\\\}' /Users/anaavigoenka/ArtWithAnnie/styles.css)",
+      "Bash(cp \"/Users/anaavigoenka/Downloads/Website Interface/1.svg\" /tmp/design1.svg)",
+      "Bash(cp \"/Users/anaavigoenka/Downloads/Website Interface/2.svg\" /tmp/design2.svg)",
+      "Bash(cp \"/Users/anaavigoenka/Downloads/Website Interface/3.svg\" /tmp/design3.svg)",
+      "Bash(qlmanage -t -s 1024 -o /tmp \"/Users/anaavigoenka/Downloads/Website Interface/2.svg\")",
+      "Bash(qlmanage -t -s 1024 -o /tmp \"/Users/anaavigoenka/Downloads/Website Interface/3.svg\")",
+      "Bash(ls /tmp/*.svg.png)",
+      "Bash(qlmanage -t -s 2048 -o /tmp/hires \"/Users/anaavigoenka/Downloads/Website Interface/1.svg\")",
+      "Bash(qlmanage -t -s 2048 -o /tmp/hires \"/Users/anaavigoenka/Downloads/Website Interface/2.svg\")",
+      "Bash(qlmanage -t -s 2048 -o /tmp/hires \"/Users/anaavigoenka/Downloads/Website Interface/3.svg\")",
+      "Bash(mkdir -p /tmp/hires)",
+      "Bash(qlmanage -t -s 2000 -o /tmp/hires \"/Users/anaavigoenka/Downloads/Website Interface/1.svg\")",
+      "Bash(qlmanage -t -s 2000 -o /tmp/hires \"/Users/anaavigoenka/Downloads/Website Interface/2.svg\")",
+      "Bash(qlmanage -t -s 2000 -o /tmp/hires \"/Users/anaavigoenka/Downloads/Website Interface/3.svg\")",
+      "Bash(python3 -c \":*)",
+      "Bash(mkdir -p /Users/anaavigoenka/ThinkOutTheBlock/assets)",
+      "Bash(cp \"/Users/anaavigoenka/Downloads/Website Interface/1.svg\" /Users/anaavigoenka/ThinkOutTheBlock/assets/)",
+      "Bash(cp \"/Users/anaavigoenka/Downloads/Website Interface/2.svg\" /Users/anaavigoenka/ThinkOutTheBlock/assets/)",
+      "Bash(cp \"/Users/anaavigoenka/Downloads/Website Interface/3.svg\" /Users/anaavigoenka/ThinkOutTheBlock/assets/)",
+      "Read(//Users/anaavigoenka/ThinkOutTheBlock/**)",
+      "Bash(for file:*)",
+      "Bash(sed -i '' 's|<a href=\"\"about.html#contact\"\">Contact</a></div>|<a href=\"\"projects.html\"\">Projects</a>\\\\n      <a href=\"\"about.html#contact\"\">Contact</a></div>|g' \"/Users/anaavigoenka/ArtWithAnnie/$file\")",
+      "Bash(sed -i '' 's|<a href=\"\"about.html#contact\"\">Contact</a>\\\\n    </div>|<a href=\"\"projects.html\"\">Projects</a>\\\\n      <a href=\"\"about.html#contact\"\">Contact</a>\\\\n    </div>|g' \"/Users/anaavigoenka/ArtWithAnnie/$file\")",
+      "Bash(echo \"Updated $file\")",
+      "Bash(head -5 '/Users/anaavigoenka/Downloads/Untitled design \\(1\\).svg')"
     ]
   }
 }
