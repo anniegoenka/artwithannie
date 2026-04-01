@@ -932,7 +932,7 @@ footer {
   background: var(--cream);
   padding: 5rem 3.5rem 2.5rem;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 2rem;
 }
@@ -956,11 +956,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 }
 
 .about-collage-img {
-  width: 700px;
+  width: 100%;
   height: auto;
   display: block;
 }
