@@ -950,8 +950,8 @@ footer {
 
 .about-name-img {
   display: block;
-  width: 520px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 700px;
   height: auto;
   margin: 0.4rem 0 1rem;
 }
