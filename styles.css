@@ -818,6 +818,11 @@ footer {
 ═══════════════════════════════════════ */
 
 .embed-section { padding: 4.5rem 3.5rem; background: var(--cream); }
+.embed-section .embed-wrapper {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: calc(56.25% * 0.85);
+}
 
 /* ── Editorial side-by-side ── */
 .editorial-embeds {
